@@ -7,6 +7,8 @@ import 'package:flutter_routing_demo/presentation/screens/index.dart';
 //import 'package:flutter_routing_demo/presentation/screens/settings_screen.dart';
 
 final mainRouter = GoRouter(
+  initialLocation: '/home', //ruta inicial cuando carge la aplicacion.
+
   routes:[
     GoRoute(
       path:'/home',
@@ -17,7 +19,7 @@ final mainRouter = GoRouter(
       builder:(context, state)=> const AboutScreen(),
     ),
     GoRoute(
-      path: '/about',
+      path: '/settings',
       builder:(context, state)=> const SettingsScreen(),
     )
   ]

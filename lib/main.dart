@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_routing_demo/presentation/screens/home/home_screen.dart';
+import 'package:flutter_routing_demo/router/main_router.dart';
 
 main()=> runApp(const MainApp());
 
@@ -8,8 +8,9 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: HomeScreen(),
+    return MaterialApp.router(
+      routerConfig: mainRouter,
+      //mainRouter nombre usado en la clase final en main_router.dart
     );
   }
 }
